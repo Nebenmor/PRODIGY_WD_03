@@ -16,3 +16,10 @@ let options = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
 let running = false;
 
+function initializeGame(){
+    cells.forEach(cell => cell.addEventListener("click", cellClicked));
+    restartBtn.addEventListener("click", restartGame);
+    statusText.textContent = `$(currentPlayer)'s turn`;
+    running = true;
+}
+
